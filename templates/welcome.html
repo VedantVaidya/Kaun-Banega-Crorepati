@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="/static/bootstrap-5.2.2-dist/css/bootstrap.min.css">
+</head>
+<body>
+    <video id="background-video" autoplay loop muted poster="bg.png">
+        <source src="/static/bg.mp4" type="video/mp4" alt="/static/bg.png">
+      </video>
+      <style>
+      #login{
+        position: absolute;
+        left: 20%;
+      }
+      #register{
+        position: absolute;
+        right: 20%;
+      }
+      #background-video {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+      }
+      </style>
+      {%include "navbar.html"%}
+      <div id="content">
+      <a href="/adminlogin" style="color: white;">Admin</a>
+        
+    <b><h1 style="color: white; text-align: center;"><br><br>Lets play Kon Banega Crorepati</h1></b><br>
+    <button type="button" id="login" class="btn btn-primary"><h1><a href="/login" style="color: white">Login</a></h1></button>
+    <button type="button" id="register" class="btn btn-success"><h1><a href="/signup" style="color: white">Sign Up</a></h1></button>
+    </div>
+</body>
+</html>

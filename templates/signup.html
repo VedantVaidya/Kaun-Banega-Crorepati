@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Register</title>
+  <link rel="stylesheet" href="/static/bootstrap-5.2.2-dist/css/bootstrap.min.css">
+</head>
+
+<body>
+  <video id="background-video" autoplay loop muted poster="bg2.png">
+    <source src="/static/bg2.mp4" type="video/mp4" alt="/static/bg2.png">
+  </video>
+  <style>
+    #background-video {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+
+    #content {
+      border: 3px solid blue;
+      display: inline-block;
+      margin-top: 5%;
+      margin-left: 5%;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 15px;
+      padding: 2%;
+      box-shadow: 10px 10px 5px gray;
+    }
+  </style>
+  {%include "navbar.html"%}
+  <div id="content">
+    <form action="/registerattempt" method="post" style="color: white;"><br><br><br>
+      <b>Name: </b>
+      <input type="text" name="name"><br><br>
+      <b>Email: </b>
+      <input type="email" name="email"><br><br>
+      <b>Password: </b>
+      <input type="password" name="password"><br><br>
+      <button type="submit" class="btn btn-danger">Login</button>
+    </form>
+  </div>
+</body>
+
+</html>

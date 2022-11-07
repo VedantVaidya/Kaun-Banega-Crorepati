@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Admin Pannel</title>
+</head>
+<body>
+    <video id="background-video" autoplay loop muted poster="bg2.png">
+        <source src="/static/bg2.mp4" type="video/mp4">
+      </video>
+      <style>
+      #background-video {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+      }
+
+      #content {
+        border: 3px solid blue;
+        display: inline-block;
+        margin-top: 5%;
+        margin-left: 5%;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 15px;
+        padding: 2%;
+        box-shadow: 10px 10px 5px gray;
+    }
+      </style>
+      {%include "navbar4.html"%}
+<div id="content">
+    <table border="2px" style="color: white;">
+        <thead>
+            <td>Name<td>
+            <td>Email<td>
+            <td>Password<td>
+            <td>ID<td>
+            <td>Money<td>
+        </thead>
+        <tr><form action="/update" method="post">
+            <td><input type="text" name="name" value="{{i[0]}}"><td>
+            <td><input type="text" name="email" value="{{i[1]}}"><td>
+            <td><input type="text" name="password" value="{{i[2]}}"><td>
+            <td><input type="text" name="id" value="{{i[3]}}"><td>
+            <td><input type="text" name="money" value="{{i[4]}}"><td>
+            <td><button type="submit" class="btn btn-info">Update</button></td>
+            </form>
+        <tr>
+    </table>
+</div>
+</body>
+</html>

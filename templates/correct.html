@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correct Answer</title>
+    <link rel="stylesheet" href="/static/bootstrap-5.2.2-dist/css/bootstrap.min.css">
+</head>
+<body>
+    <video id="background-video" autoplay loop muted poster="bg4.png">
+        <source src="/static/bg4.mp4" type="video/mp4" alt="bg4.png" poster="bg4.jpg">
+    </video>
+    <style>
+      #background-video {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+      }
+
+      #content {
+        border: 3px solid blue;
+        display: inline-block;
+        align-content: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        margin-top: 2%;
+        margin-left: 2%;
+        border-radius: 15px;
+        padding: 2%;
+        box-shadow: 10px 10px 5px gray;
+      }
+    </style> 
+    <div id="content">
+    <br><br><h1 style="color: white; text-align: center;">You Won Rupees {{t[2]}}<br>
+    <a href="/play?id={{t[0]}}&q={{t[1]}}"><button type="button" class="btn btn-primary">Next</button></a>  
+    </div>
+</body>
+</html>

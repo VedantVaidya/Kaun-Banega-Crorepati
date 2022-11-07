@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Details</title>
+</head>
+<body>
+    <video id="background-video" autoplay loop muted poster="bg2.png">
+        <source src="/static/bg2.mp4" type="video/mp4">
+      </video>
+      <style>
+      #background-video {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+      }
+      #content {
+        border: 3px solid blue;
+        display: inline-block;
+        align-content: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        margin-top: 2%;
+        margin-left: 2%;
+        border-radius: 15px;
+        padding: 2%;
+        box-shadow: 10px 10px 5px gray;
+      }
+      </style>
+      {%include "navbar.html"%}
+<div id="content">
+    <h1 style="color: white;">Name : {{tp[0]}}</h1>
+    <h1 style="color: white;">Email : {{tp[1]}}</h1>
+    <h1 style="color: white;">ID : {{tp[2]}}</h1>
+    <a href="/login"><button type="button" class="btn btn-warning"><h2>Login</h2></button></a>
+
+</div></body>
+</html>

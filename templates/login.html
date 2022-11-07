@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="/static/bootstrap-5.2.2-dist/css/bootstrap.min.css">
+</head>
+
+<body>
+  <video id="background-video" autoplay loop muted poster="bg2.png">
+    <source src="/static/bg2.mp4" type="video/mp4" alt="/static/bg2.png">
+  </video>
+  <style>
+    #background-video {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+
+    #content {
+      border: 3px solid blue;
+      display: inline-block;
+      margin-top: 5%;
+      margin-left: 5%;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 15px;
+      padding: 2%;
+      box-shadow: 10px 10px 5px gray;
+    }
+  </style>
+
+  {%include "navbar.html"%}
+
+  <div id="content">
+
+    <form action="/loginattempt" method="post" style="color: white;">
+      <b>ID: </b>
+      <input type="text" name="id"><br>
+      <b>Password: </b>
+      <input type="password" name="password"><br>
+      <button type="submit" class="btn btn-warning">Login</button>
+    </form>
+  </div>
+</body>
+
+</html>

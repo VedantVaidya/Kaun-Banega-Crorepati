@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Transfer</title>
+  <link rel="stylesheet" href="/static/bootstrap-5.2.2-dist/css/bootstrap.min.css">
+</head>
+
+<body>
+  <video id="background-video" autoplay loop muted poster="bg2.png">
+    <source src="/static/bg2.mp4" type="video/mp4">
+  </video>
+  <style>
+    #background-video {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+
+    #content {
+      border: 3px solid blue;
+      display: inline-block;
+      align-content: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      margin-top: 2%;
+      margin-left: 2%;
+      border-radius: 15px;
+      padding: 2%;
+      box-shadow: 10px 10px 5px gray;
+    }
+  </style>
+  {%include "navbar3.html"%}
+  <div id="content">
+    <h3 style="color: white; text-align: left;">Name: {{i[0]}}</h3>
+    <h3 style="color: white; text-align: left;">ID: {{i[2]}}</h3>
+    <h3 style="color: white; text-align: left;">Balance: {{i[3]}}</h3><br><br>
+    <h2 style="color: white; text-align: left;">
+      <form action="/trans?id={{i[2]}}" method="post">
+        Enter the money to be transfered: <input type="text" name="money"><br>
+        Enter the ID of the receiver: <input type="text" name="id2">
+    </h2><br><br><br>
+    <button type="submit" class="btn btn-danger">Transfer</button>
+    </form>
+    <h2><a href="/home?id={{i[2]}}"><button type="button" class="btn btn-info">Click Here to go on Home Paget</button></a>
+    </h2>
+  </div>
+</body>
+
+</html>
